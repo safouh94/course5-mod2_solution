@@ -43,6 +43,9 @@
           }, {
             quantity: 6,
             name: 'Marsmallows'
+          }, {
+            quantity: 7,
+            name: 'nougat'
           }];
 
         service.boughtItems = [];
