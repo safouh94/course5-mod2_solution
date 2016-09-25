@@ -11,37 +11,37 @@
 
         service.itemsList = [
           {
-            quantity: 15,
+            quantity: 4,
             name: 'Cupcakes'
           }, {
-            quantity: 16,
+            quantity: 8,
             name: 'Donuts'
           }, {
-            quantity: 21,
+            quantity: 16,
             name: 'Eclairs'
           }, {
-            quantity: 22,
+            quantity: 32,
             name: 'Froyos'
           }, {
-            quantity: 23,
+            quantity: 64,
             name: 'Gingerbreads'
           }, {
-            quantity: 30,
+            quantity: 128,
             name: 'Honeycombs'
           }, {
-            quantity: 40,
+            quantity: 256,
             name: 'Ice Cream Sandwiches'
           }, {
-            quantity: 41,
+            quantity: 512,
             name: 'Jelly Beans'
           }, {
-            quantity: 44,
+            quantity: 1024,
             name: 'KitKats'
           }, {
-            quantity: 50,
+            quantity: 2065,
             name: 'Lollipops'
           }, {
-            quantity: 60,
+            quantity: 6,
             name: 'Marsmallows'
           }];
 
@@ -57,12 +57,11 @@
     ToBuyShoppingController.$inject = ['ShoppingListService'];
 
     function ToBuyShoppingController(ShoppingListService) {
-        var toBuyCtrl = this;
+        var ToBuyController = this;
 
-        toBuyCtrl.itemsList = ShoppingListService.itemsList;
-        // console.log(toBuyCtrl.itemsList);
+        ToBuyController.itemsList = ShoppingListService.itemsList;
 
-        toBuyCtrl.markItem = function (itemIndex) {
+        ToBuyController.markItem = function (itemIndex) {
             ShoppingListService.markItem(itemIndex);
         }
     }
@@ -70,8 +69,8 @@
     AlreadyBoughtShoppingController.$inject = ['ShoppingListService'];
 
     function AlreadyBoughtShoppingController(ShoppingListService) {
-        var alreadyBoughtCtrl = this;
+        var AlreadyBoughtController = this;
 
-        alreadyBoughtCtrl.boughtItems = ShoppingListService.boughtItems;
+        AlreadyBoughtController.boughtItems = ShoppingListService.boughtItems;
     }
 })();
